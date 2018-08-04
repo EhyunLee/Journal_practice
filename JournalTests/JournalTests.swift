@@ -100,6 +100,19 @@ class JournalTests: XCTestCase {
         XCTAssertEqual(entries, [today, yesterday, bYesterday])
     }
     
+    
+    func test_최근_순으로_엔트리를_불러올_수_있다() {
+        // Setup
+        let dayBeforeYesterday = Entry(id: 1, createdAt: Date.distantPast, text: "그저께 일기")
+        let yesterDay = Entry(id: 2, createdAt: Date(), text: "어제 일기")
+        let today = Entry(id: 3, createdAt: Date.distantFuture, text: "오늘 일기")
+        let journal = InMemoryJournal(entries: [dayBeforeYesterday, yesterDay, today])
+        // Run
+        let entries = journal.recentEntries(max: 3)
+        // Verify
+        XCTAssertEqual(entries.count, 3)
+        XCTAssertEqual(entries, [today, yesterDay, dayBeforeYesterday])
+    }
 }
 
 
