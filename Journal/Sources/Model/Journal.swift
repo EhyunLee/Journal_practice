@@ -45,9 +45,8 @@ class InMemoryJournal: Journal {
     
     func recentEntries(max: Int) -> [Entry] {
         
-        return []
-        /*return entries
+        return entries
             .values
-            .sorted { $0.createdAt > $1.createdAt }*/
+            .sorted { $0.createdAt > $1.createdAt }
     }
 }

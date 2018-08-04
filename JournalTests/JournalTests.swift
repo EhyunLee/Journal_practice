@@ -10,6 +10,14 @@ import XCTest
 @testable import Journal
 
 class JournalTests: XCTestCase {
+    /* 중복되는 테스트 케이스를 한 곳에서 관리
+    var newEntry: Entry!
+    
+    override func setUp() {
+        newEntry = Entry(id: 1, createdAt: Date(), text: "일기")
+    }
+ */
+    
     func testEditEntryText() {
         // Setup
         let entry = Entry(id: 0, createdAt: Date(), text: "첫 번째 일기")
