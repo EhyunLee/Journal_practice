@@ -27,6 +27,7 @@ class JournalTests: XCTestCase {
         
         // Verify
         XCTAssertEqual(entry.text, "첫 번째 테스트")
+        //expect(entry.text).to(equal("첫 번째 테스트"))
     }
     
     func testAddEntryToJournal() {
@@ -36,7 +37,6 @@ class JournalTests: XCTestCase {
         
         // Run
         journal.add(newEntry)
-        
         // Verify
         let entryInJournal: Entry? = journal.entry(with: 1)
         
