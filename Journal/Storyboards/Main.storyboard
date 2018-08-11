@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="35v-Xp-Ru0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="ta8-to-pPi">
+            <objects>
+                <viewController id="35v-Xp-Ru0" customClass="EntryViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2Y-0L-8f3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V29-L0-JaJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.08.11 SAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWX-tk-9E3">
+                                        <rect key="frame" x="8" y="103" width="151" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PE-9H-SXi">
+                                        <rect key="frame" x="307" y="102" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="저장하기"/>
+                                        <connections>
+                                            <action selector="saveEntry:" destination="35v-Xp-Ru0" eventType="touchUpInside" id="aN7-np-Nyj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96412841429999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zWX-tk-9E3" firstAttribute="bottom" secondItem="V29-L0-JaJ" secondAttribute="bottomMargin" id="G4g-dn-4KD"/>
+                                    <constraint firstItem="3PE-9H-SXi" firstAttribute="centerY" secondItem="zWX-tk-9E3" secondAttribute="centerY" id="Lg6-Hz-Me1"/>
+                                    <constraint firstAttribute="trailing" secondItem="3PE-9H-SXi" secondAttribute="trailing" constant="8" id="WBp-KA-RUS"/>
+                                    <constraint firstItem="zWX-tk-9E3" firstAttribute="leading" secondItem="V29-L0-JaJ" secondAttribute="leading" constant="8" id="ckc-nZ-evI"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHN-0s-Hbe">
+                                <rect key="frame" x="0.0" y="146" width="375" height="521"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tHN-0s-Hbe" firstAttribute="trailing" secondItem="swb-DV-3ad" secondAttribute="trailing" id="AFi-dZ-T5C"/>
+                            <constraint firstItem="V29-L0-JaJ" firstAttribute="trailing" secondItem="swb-DV-3ad" secondAttribute="trailing" id="Ewn-hT-2iY"/>
+                            <constraint firstAttribute="bottom" secondItem="V29-L0-JaJ" secondAttribute="bottom" constant="529" id="Koy-1d-6DY"/>
+                            <constraint firstItem="V29-L0-JaJ" firstAttribute="top" secondItem="Y2Y-0L-8f3" secondAttribute="top" id="Mdb-pa-WzH"/>
+                            <constraint firstItem="tHN-0s-Hbe" firstAttribute="leading" secondItem="swb-DV-3ad" secondAttribute="leading" id="P4q-zu-wWo"/>
+                            <constraint firstItem="V29-L0-JaJ" firstAttribute="leading" secondItem="swb-DV-3ad" secondAttribute="leading" id="RCR-Uq-vC6"/>
+                            <constraint firstItem="tHN-0s-Hbe" firstAttribute="bottom" secondItem="swb-DV-3ad" secondAttribute="bottom" id="TDr-jp-GTq"/>
+                            <constraint firstItem="tHN-0s-Hbe" firstAttribute="centerX" secondItem="V29-L0-JaJ" secondAttribute="centerX" id="X4Y-7d-qC9"/>
+                            <constraint firstItem="V29-L0-JaJ" firstAttribute="trailing" secondItem="tHN-0s-Hbe" secondAttribute="trailing" id="ZEe-PC-NiH"/>
+                            <constraint firstItem="tHN-0s-Hbe" firstAttribute="top" secondItem="V29-L0-JaJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dPO-Zc-Sa4"/>
+                            <constraint firstItem="V29-L0-JaJ" firstAttribute="leading" secondItem="tHN-0s-Hbe" secondAttribute="leading" id="kIY-qq-ixd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="swb-DV-3ad"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="3PE-9H-SXi" id="8g1-6Y-PRu"/>
+                        <outlet property="dateLabel" destination="zWX-tk-9E3" id="G2R-7U-nJ4"/>
+                        <outlet property="textView" destination="tHN-0s-Hbe" id="BU7-oQ-iSy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVv-t1-LOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365.60000000000002" y="243.32833583208398"/>
+        </scene>
+    </scenes>
+</document>
