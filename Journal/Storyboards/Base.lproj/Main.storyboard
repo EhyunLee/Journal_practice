@@ -14,35 +14,50 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="0qe-gw-cou">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLI-Lk-eC7">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCG-oF-1dd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2018. 08. 04 Sat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-Av-XkJ">
+                                        <rect key="frame" x="8" y="91" width="231" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAp-Fq-dU0">
+                                        <rect key="frame" x="354" y="101" width="52" height="30"/>
+                                        <state key="normal" title="작성하기">
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96412841429999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="WVy-4W-W2A"/>
-                                    <constraint firstAttribute="height" constant="100" id="hoe-jt-gen"/>
+                                    <constraint firstItem="IKb-Av-XkJ" firstAttribute="leading" secondItem="qCG-oF-1dd" secondAttribute="leading" constant="8" id="33v-qZ-unh"/>
+                                    <constraint firstAttribute="trailing" secondItem="pAp-Fq-dU0" secondAttribute="trailing" constant="8" id="5Qu-1o-asn"/>
+                                    <constraint firstAttribute="bottom" secondItem="IKb-Av-XkJ" secondAttribute="bottom" constant="17" id="Wh4-Jt-8LT"/>
+                                    <constraint firstAttribute="bottom" secondItem="pAp-Fq-dU0" secondAttribute="bottom" constant="16" id="d6L-2H-Mra"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ks-mL-u7A">
-                                <rect key="frame" x="100" y="636" width="314" height="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zss-gR-T1u">
-                                <rect key="frame" x="50" y="50" width="100" height="628"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ECK-oQ-BSG">
+                                <rect key="frame" x="20" y="155" width="374" height="581"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jLI-Lk-eC7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Wo-Eg-iaj"/>
-                            <constraint firstItem="jLI-Lk-eC7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yQm-Tb-o3g"/>
+                            <constraint firstItem="qCG-oF-1dd" firstAttribute="trailing" secondItem="QdN-KG-obT" secondAttribute="trailing" id="XMI-hl-j1z"/>
+                            <constraint firstItem="qCG-oF-1dd" firstAttribute="leading" secondItem="QdN-KG-obT" secondAttribute="leading" id="cvX-iX-bNW"/>
+                            <constraint firstItem="qCG-oF-1dd" firstAttribute="top" secondItem="0qe-gw-cou" secondAttribute="top" id="uUB-3h-Tp5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="QdN-KG-obT"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
